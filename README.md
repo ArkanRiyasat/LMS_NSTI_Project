@@ -52,7 +52,7 @@ This project is a Learning Management System (LMS) built with React.js for the f
 
 1. Clone the repository: git clone https://github.com/ArkanRiyasat/LMS_NSTI_Project.git
 
-2. Navigate to the backend directory and run this commandto start the backend server: mvn spring-boot:run
+2. Navigate to the backend directory and run this command to start the backend server: mvn spring-boot:run
 
 3. Navigate to the frontend directory and run this command to start the frontend server: npm start
 
