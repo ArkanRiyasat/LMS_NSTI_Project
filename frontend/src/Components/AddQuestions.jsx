@@ -44,7 +44,7 @@ function AddQuestion() {
       error = 'option3 is required';
     } else if (name === 'option4' && value === '') {
       error = 'option4 is required';
-    } else if (name === 'p_link' && value === '') {
+    } else if (name === 'answer' && value === '') {
       error = 'answer is required';
     }
     setFormErrors({ ...formErrors, [name]: error });
@@ -71,7 +71,7 @@ function AddQuestion() {
     
 
     try {
-      const response = await fetch('http://localhost:8080/api/questions', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/questions`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

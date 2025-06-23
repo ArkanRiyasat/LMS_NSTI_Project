@@ -22,7 +22,7 @@ function AddCourse() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/api/courses', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/courses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ function AddCourse() {
         setError(data.error)
       }
     } catch (error) {
-      setError('course add error:', error);
+      setError(`Course add error: ${error.message}`);
     }
   };
 

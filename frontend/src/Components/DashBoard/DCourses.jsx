@@ -31,7 +31,7 @@ function Courses() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/courses`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/courses`)
       .then((response) => response.json())
       .then((data) => {
         setCourses(data);
@@ -44,7 +44,7 @@ function Courses() {
 
   function deleteCourse(courseId) {
     axios
-      .delete("http://localhost:8800/delete", {
+      .delete(`${process.env.REACT_APP_BACKEND_URL}/delete`, {
         data: { courseId: courseId },
       })
       .then((response) => {
